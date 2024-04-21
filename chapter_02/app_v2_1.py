@@ -1,13 +1,13 @@
 import dash
-import dash_html_components as html
-import dash_core_components as dcc
+from dash import dcc
+from dash import html
 import dash_bootstrap_components as dbc
 from dash.dependencies import Output, Input
 import pandas as pd
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
-poverty_data = pd.read_csv('../data/PovStatsData.csv')
+poverty_data = pd.read_csv(r'data\PovStatsData.csv')
 
 app.layout = html.Div([
     html.H1('Poverty And Equity Database'),

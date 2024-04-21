@@ -1,5 +1,5 @@
 import dash
-import dash_html_components as html
+from dash import html
 
 app = dash.Dash(__name__)
 
@@ -14,10 +14,9 @@ app.layout = html.Div([
         html.Li('Temporal Coverage: 1974 - 2019'),
         html.Li('Update Frequency: Quarterly'),
         html.Li('Last Updated: March 18, 2020'),
-        html.Li([
-            'Source: ',
-            html.A(children='https://datacatalog.worldbank.org/dataset/poverty-and-equity-database',
-                   href='https://datacatalog.worldbank.org/dataset/poverty-and-equity-database')
+        html.Li(['Source: ',
+                html.A(children='https://datacatalog.worldbank.org/dataset/poverty-and-equity-database',
+                href='https://datacatalog.worldbank.org/dataset/poverty-and-equity-database')
         ])
     ])
 ])

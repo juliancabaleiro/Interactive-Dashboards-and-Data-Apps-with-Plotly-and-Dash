@@ -1,12 +1,11 @@
 import dash
-import dash_html_components as html
+from dash import html
 
 app = dash.Dash(__name__)
 
 app.layout = html.Div([
-    html.H1('Hello, World!')
+    html.H1('Hola, como estas?!')
 ])
-
 
 if __name__ == '__main__':
     app.run_server(debug=True)
